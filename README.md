@@ -26,32 +26,32 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why are forms used so often in web applications and software?
+- [x] Why are forms used so often in web applications and software?
 
 
     They are used to create users, login/out, and populate data into databases, very useful for a lot of things...
 
 
 
-- [ ] What advantages are there by using a forms library like Formik?
+- [x] What advantages are there by using a forms library like Formik?
 
 
     It makes making forms much less painful since it abstracts away a lot of repetitive and static functions
 
 
 
-- [ ] What is stateful logic?
+- [x] What is stateful logic?
 
     this is the logic we use to set state and modify it throughout the component, inside the component above the render essentially
 
 
 
-- [ ] What is a custom hook, and what does it mean to compose hooks together?
+- [x] What is a custom hook, and what does it mean to compose hooks together?
 
     a custom hook is just vanilla JS written in a specific pattern to mimic an actual hook. its used to abstract a js function to be used in multiple components, functions.
 
 
-- [ ] Describe the process of retrieving a token from a server and using that token in subsequent API calls.
+- [x] Describe the process of retrieving a token from a server and using that token in subsequent API calls.
     we make a post request to the server like with a user/password, the server will return a token, we then save that returned token to the local storage
     once a token is set to the local storage, we pull it from storage via getItem, then we can pass it to the api with our request to make our next calls with Auth.
 
@@ -88,14 +88,20 @@ Follow these steps for completing your project:
 
 ## Description
 
-In the challenge for this Sprint, you will demonstrate proficiency by creating an application that has a registration page and let's you register a new user. Once a user is registered, you are returned a token that you can use in other calls to fetch data and render protected data to the DOM.
+In the challenge for this Sprint, you will demonstrate proficiency by creating an application that has a registration page and let's you register a new user. 
+Once a user is registered, you are returned a token that you can use in other calls to fetch data and render protected data to the DOM.
+
+
+
+
+
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] A registration form built with formik - include inputs for a `username` and a `password`
-- [ ] Form validation using Yup
+- [x] A registration form built with formik - include inputs for a `username` and a `password`
+- [x] Form validation using Yup
 - [ ] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
 
 ```js
@@ -104,6 +110,10 @@ Your finished project must include all of the following requirements:
     password: "password"
 }
 ```
+
+
+
+
 
 and the response object will look like this:
 
@@ -115,11 +125,16 @@ and the response object will look like this:
 }
 ```
 
-- [ ] Write a custom hook that can set and retrieve this token to and from local storage
+
+
+
+
+
+- [x] Write a custom hook that can set and retrieve this token to and from local storage
 
 - [ ] A GET request made with the token to `http://localhost:6000/api/restricted/data` to retrieve protected data
 
-- [ ] Map over the array of objects you recieve and render some or all of it's information to the DOM.
+- [ ] Map over the array of objects you receive and render some or all of it's information to the DOM.
 
 
 

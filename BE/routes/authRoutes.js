@@ -30,7 +30,7 @@ router.post('/register', function(req, res, next) {
       let token = generateToken({ id });
       res.json({
         error: false,
-        message: 'User created succesfully',
+        message: 'User created successfully',
         token
       });
     })
