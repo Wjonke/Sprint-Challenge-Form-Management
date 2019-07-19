@@ -69,7 +69,7 @@ const FormikLogin =  withFormik({
         .then(res => {
           console.log(res.data);
           localStorage.setItem("token", res.data.token);
-          formikBag.props.history.push("/secret-list");
+          formikBag.props.history.push("/secret-info");
           
         })
         .catch(err => {
