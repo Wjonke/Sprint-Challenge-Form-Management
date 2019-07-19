@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Redirect } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import FormikLogin from "./components/Login";
 import SecretInfo from './components/SecretInfo'
 

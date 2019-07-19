@@ -10,16 +10,12 @@ const SecretInfo = () => {
     axiosWithAuth()
       .get('http://localhost:5000/api/restricted/data')
       .then(res => {
-        console.log(res.data);
+      console.log(res.data)
        return setSecrets(res.data);
           })
     
           .catch(err => {console.log('err')
           } )},[]);
-
-
-
-
 
   return (
     <div>
