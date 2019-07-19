@@ -11,16 +11,16 @@ function App(props) {
   return (
 
     <div style={{ padding: 30 }} className="App">
-      <h1>Log in to See Secret Information!</h1>
+      <h1>Log In To See Secret Information!</h1>
 
 
-      <Link to="/login">
+      {/* <Link to="/login">
         <button className="btn">Login</button>
-      </Link>
+      </Link> */}
 
-      <Link to="/secret-info">
+      {/* <Link to="/secret-info">
         <button className="btn">Secret Info</button>
-      </Link>
+      </Link> */}
 
       <Link to="/login">
         <button

@@ -23,7 +23,7 @@ const SecretInfo = () => {
 
   return (
     <div>
-      <h1>this is where the secrets go</h1>
+      <h1>Super Secret Dinner Recipe:</h1>
       {secrets.map(secret => (
               
               <div key={secret.name}>
