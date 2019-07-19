@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Redirect } from "react-router-dom";
 import FormikLogin from "./components/Login";
 import SecretInfo from './components/SecretInfo'
 
@@ -22,15 +22,17 @@ function App(props) {
         <button className="btn">Secret Info</button>
       </Link>
 
-      <button
+      <Link to="/login">
+        <button
         className="btn"
         onClick={() => {
           localStorage.removeItem("token");
-          
         }}
       >
         Logout
       </button>
+      </Link>
+      
 
       
 
