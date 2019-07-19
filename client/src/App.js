@@ -26,12 +26,13 @@ function App(props) {
         className="btn"
         onClick={() => {
           localStorage.removeItem("token");
+          
         }}
       >
         Logout
       </button>
 
-      {/* <SecretInfo {...props}/> */}
+      
 
       <Route exact path="/" />
       <Route exact path="/login" component={FormikLogin} />

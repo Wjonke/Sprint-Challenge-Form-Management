@@ -1,4 +1,6 @@
 import axios from 'axios';
+import useLocalStorage from '../hooks/useLocalStorage'
+
 
 export const axiosWithAuth =() => {
     const token = localStorage.getItem('token');
@@ -11,3 +13,6 @@ export const axiosWithAuth =() => {
         }
     });
 };
+
+          // useLocalStorage(res.data.token);
+          
