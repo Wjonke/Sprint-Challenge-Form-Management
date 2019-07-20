@@ -2,11 +2,12 @@ import React from "react";
 import { Route, Link } from "react-router-dom";
 import FormikLogin from "./components/Login";
 import SecretInfo from './components/SecretInfo'
-
+import useLocalStorage from './hooks/useLocalStorage'
 import './App.css';
 
 function App(props) {
 
+  const [token, setToken] = useLocalStorage("token")
 
   return (
 
@@ -37,7 +38,11 @@ function App(props) {
       
 
       <Route exact path="/" />
-      <Route exact path="/login" component={FormikLogin} />
+
+      <Route exact path="/login" render={props => {
+        return <FormikLogin {...props} setToken/>
+      }} />
+
       <Route exact path="/secret-info" component={SecretInfo} />
 
 

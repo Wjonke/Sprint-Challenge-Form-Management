@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const useLocalStorage = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(() => {
@@ -25,3 +25,7 @@ const useLocalStorage = (key, initialValue) => {
 };
 
 export default useLocalStorage;
+
+// const [token, setToken] = useLocalStorage("token")
+
+// setToken(res.data.token)

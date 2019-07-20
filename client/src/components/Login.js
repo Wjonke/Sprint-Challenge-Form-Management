@@ -2,7 +2,7 @@ import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
-// import useLocalStorage from '../hooks/useLocalStorage'
+
 
 
 
@@ -59,7 +59,7 @@ const FormikLogin =  withFormik({
   }),
 
   handleSubmit(values, formikBag) {
-    // const [storedValue, setValue] = useLocalStorage()
+
     return(
       axios
         .post(`http://localhost:5000/api/register`, values)
@@ -67,14 +67,14 @@ const FormikLogin =  withFormik({
 
           console.log(res.data);
 
-          localStorage.setItem("token", res.data.token);
-          // setValue(res.data.token);
+          // localStorage.setItem("token", res.data.token);
+          formikBag.props.setValue(res.data.token);
 
           formikBag.props.history.push("/secret-info");
           
         })
         .catch(err => {
-          console.log("err");
+          console.log("err in handle submit, .then");
         })
     ) 
   }

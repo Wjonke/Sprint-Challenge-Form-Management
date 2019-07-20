@@ -23,9 +23,10 @@ const SecretInfo = () => {
       {secrets.map(secret => (
               
               <div key={secret.name}>
-                <h1>{secret.course}</h1>
-                <h2>{secret.technique}</h2>
-                <h2>{secret.ingredients}</h2>
+                <h1>{secret.name}</h1>
+                <h2>{secret.course}</h2>
+                <h3>{secret.technique}</h3>
+                <h3>{secret.ingredients}</h3>
               </div>
                   
             ))}
