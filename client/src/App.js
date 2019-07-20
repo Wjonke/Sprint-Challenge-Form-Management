@@ -40,7 +40,7 @@ function App(props) {
       <Route exact path="/" />
 
       <Route exact path="/login" render={props => {
-        return <FormikLogin {...props} setToken/>
+        return <FormikLogin {...props} setToken={setToken}/>
       }} />
 
       <Route exact path="/secret-info" component={SecretInfo} />

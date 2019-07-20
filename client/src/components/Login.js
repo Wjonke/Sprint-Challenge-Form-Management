@@ -68,13 +68,14 @@ const FormikLogin =  withFormik({
           console.log(res.data);
 
           // localStorage.setItem("token", res.data.token);
-          formikBag.props.setValue(res.data.token);
+
+          formikBag.props.setToken(res.data.token);
 
           formikBag.props.history.push("/secret-info");
           
         })
         .catch(err => {
-          console.log("err in handle submit, .then");
+          console.log("err in handle submit");
         })
     ) 
   }
