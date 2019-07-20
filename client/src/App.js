@@ -6,7 +6,8 @@ import useLocalStorage from './hooks/useLocalStorage'
 import './App.css';
 
 function App(props) {
-
+//bringing in custom hook to pass down to FormikLogin
+//cant do it directly in Formik due to it being a HOC
   const [token, setToken] = useLocalStorage("token")
 
   return (
@@ -39,9 +40,12 @@ function App(props) {
 
       <Route exact path="/" />
 
+{/*changed component to route since we need to pass in props, assigned setToken to value and passed it down to forminLogin */}
       <Route exact path="/login" render={props => {
         return <FormikLogin {...props} setToken={setToken}/>
       }} />
+
+
 
       <Route exact path="/secret-info" component={SecretInfo} />
 

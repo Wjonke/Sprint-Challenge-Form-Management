@@ -68,7 +68,9 @@ const FormikLogin =  withFormik({
           console.log(res.data);
 
           // localStorage.setItem("token", res.data.token);
+          //^^^^^old way^^^^^, with out CustomHook, works just fine, just remove custom hook to enable
 
+          //CUSTOM-HOOK BELOW
           formikBag.props.setToken(res.data.token);
 
           formikBag.props.history.push("/secret-info");
